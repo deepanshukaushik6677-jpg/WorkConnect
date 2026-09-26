@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LocalHire connects people who need work done with trusted local workers and service professionals." />
+  <title>LocalHire — Find local people for real-world work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="LocalHire home">
+        <span class="brand-mark" aria-hidden="true">LH</span>
+        <span>LocalHire</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#categories">Categories</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#trust">Trust & safety</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost btn-small js-auth" data-role="hirer">Sign in</button>
+        <button class="btn btn-primary btn-small js-auth" data-role="worker">Join free</button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <a href="#categories">Categories</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#trust">Trust & safety</a>
+      <a href="#faq">FAQ</a>
+      <div class="mobile-nav-actions">
+        <button class="btn btn-ghost js-auth" data-role="hirer">Sign in</button>
+        <button class="btn btn-primary js-auth" data-role="worker">Join free</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-lg">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="live-dot"></span> Built for local, real-world work</div>
+          <h1>Get the right person for the job.<br /><span>Find work close to home.</span></h1>
+          <p class="hero-lead">
+            LocalHire connects people who need work done with plumbers, electricians, drivers, cleaners,
+            technicians, construction workers and other local service professionals.
+          </p>
+
+          <div class="intent-switch" role="tablist" aria-label="Choose what you need">
+            <button class="intent-btn is-active" type="button" role="tab" aria-selected="true" data-intent="hire">
+              <span class="intent-icon">⌖</span>
+              <span><strong>I need someone</strong><small>Hire for a job</small></span>
+            </button>
+            <button class="intent-btn" type="button" role="tab" aria-selected="false" data-intent="work">
+              <span class="intent-icon">↗</span>
+              <span><strong>I need work</strong><small>Get discovered locally</small></span>
+            </button>
+          </div>
+
+          <form class="hero-search" id="hero-search">
+            <div class="search-field">
+              <label for="service">What work do you need?</label>
+              <input id="service" name="service" type="text" autocomplete="off" placeholder="Try “electrician”, “driver”, “painter”…" />
+            </div>
+            <div class="search-field location-field">
+              <label for="location">Where?</label>
+              <input id="location" name="location" type="text" autocomplete="off" placeholder="City, area or locality" />
+            </div>
+            <button class="btn btn-primary search-submit" type="submit">Find people</button>
+          </form>
+
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>RK</span><span>AS</span><span>NP</span><span>+</span>
+            </div>
+            <p><strong>Local-first by design.</strong> Search by distance, availability, skills and work type.</p>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Example worker discovery interface">
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+          <div class="floating-pill pill-top"><span class="status-dot"></span> 14 people available nearby</div>
+          <div class="worker-card featured-card">
+            <div class="worker-card-head">
+              <div class="worker-avatar">RK</div>
+              <div>
+                <div class="worker-name">Ravi Kumar</div>
+                <div class="worker-role">Electrician · 8 yrs experience</div>
+              </div>
+              <button class="icon-btn subtle" type="button" aria-label="Save Ravi" data-toast="Saved to shortlist">♡</button>
+            </div>
+            <div class="verified-row"><span class="verified">✓</span> Mobile verified <span class="divider-dot"></span> Nearby</div>
+            <div class="worker-tags"><span>Wiring</span><span>Inverter</span><span>Fault repair</span></div>
+            <div class="worker-meta">
+              <span>₹450–₹900 / visit</span>
+              <span>2.4 km away</span>
+            </div>
+            <div class="worker-bottom">
+              <div class="rating"><strong>4.9</strong><span>★★★★★</span><small>124 reviews</small></div>
+              <button class="btn btn-primary btn-small js-request" type="button">Request</button>
+            </div>
+          </div>
+          <div class="mini-card mini-location">
+            <div class="mini-icon">⌖</div>
+            <div><strong>Area search</strong><small>Exact address stays private until needed</small></div>
+          </div>
+          <div class="mini-card mini-match">
+            <div class="match-ring">92%</div>
+            <div><strong>Strong match</strong><small>Skills + distance + availability</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip section-sm" aria-label="Platform principles">
+      <div class="container trust-strip-grid">
+        <div><span class="trust-icon">✓</span><span><strong>Verified profiles</strong><small>Phone + optional identity checks</small></span></div>
+        <div><span class="trust-icon">⌖</span><span><strong>Local discovery</strong><small>Search by area and radius</small></span></div>
+        <div><span class="trust-icon">↔</span><span><strong>Two-way reviews</strong><small>Workers and hirers both build trust</small></span></div>
+        <div><span class="trust-icon">◔</span><span><strong>Flexible work types</strong><small>One-time to permanent</small></span></div>
+      </div>
+    </section>
+
+    <section class="section section-accent" id="categories">
+      <div class="container">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <div class="eyebrow">One platform, many kinds of work</div>
+            <h2>Find people by what they actually do.</h2>
+          </div>
+          <p>Start broad, then narrow by skill, experience, distance, availability, rating or expected pay.</p>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <div class="eyebrow">Simple on both sides</div>
+          <h2>A clear path from need → match → completed work.</h2>
+          <p>No maze of screens. Each step gives the user one obvious next action.</p>
+        </div>
+
+        <div class="workflow-toggle" role="tablist" aria-label="Workflow side">
+          <button class="workflow-tab is-active" role="tab" aria-selected="true" data-flow="hirer">For people hiring</button>
+          <button class="workflow-tab" role="tab" aria-selected="false" data-flow="worker">For people working</button>
+        </div>
+
+        <div class="workflow" id="workflow-hirer">
+          <article class="workflow-step"><span>01</span><div><h3>Describe the work</h3><p>Choose a category, add skills, location, timing and whether the work is one-time, temporary or regular.</p></div></article>
+          <article class="workflow-step"><span>02</span><div><h3>Review matches</h3><p>Compare nearby people by experience, availability, ratings, price and profile details.</p></div></article>
+          <article class="workflow-step"><span>03</span><div><h3>Connect & confirm</h3><p>Send a request, chat, call when allowed, agree the scope and confirm the hiring relationship.</p></div></article>
+          <article class="workflow-step"><span>04</span><div><h3>Complete & review</h3><p>Track status, settle payment, close the job and leave a two-way review.</p></div></article>
+        </div>
+
+        <div class="workflow hidden" id="workflow-worker">
+          <article class="workflow-step"><span>01</span><div><h3>Build your profile</h3><p>Choose categories and skills, add experience, service area, availability, work preferences and portfolio photos.</p></div></article>
+          <article class="workflow-step"><span>02</span><div><h3>Get discovered</h3><p>Appear in local search when your skills, location and availability fit someone's request.</p></div></article>
+          <article class="workflow-step"><span>03</span><div><h3>Respond to work</h3><p>Receive applications or direct requests, review the scope and decide whether to accept.</p></div></article>
+          <article class="workflow-step"><span>04</span><div><h3>Work, settle & grow</h3><p>Update job status, complete the work, receive settlement and build your reputation with reviews.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container discovery-grid">
+        <div class="discovery-copy reveal">
+          <div class="eyebrow eyebrow-dark">A useful matching layer</div>
+          <h2>Not just a directory. A way to find a fit.</h2>
+          <p>The platform can combine practical signals rather than forcing people to browse hundreds of profiles.</p>
+          <div class="signal-list">
+            <div><span>01</span><strong>What the job needs</strong><small>Category, skills, work type, schedule</small></div>
+            <div><span>02</span><strong>What the worker offers</strong><small>Experience, service area, availability, charges</small></div>
+            <div><span>03</span><strong>What both sides say</strong><small>Ratings, reviews, verification and history</small></div>
+          </div>
+        </div>
+
+        <div class="match-panel reveal">
+          <div class="panel-top">
+            <div><span class="eyebrow">Sample search</span><span class="muted">Near your area</span></div>
+            <span class="result-count" id="result-count">8 matches</span>
+          </div>
+          <div class="filter-row" id="filter-row">
+            <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+            <button class="filter-chip" type="button" data-filter="verified">Verified</button>
+            <button class="filter-chip" type="button" data-filter="available">Available now</button>
+            <button class="filter-chip" type="button" data-filter="high-rated">4.8+</button>
+          </div>
+          <div class="search-results" id="search-results"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="container trust-grid">
+        <div class="trust-visual reveal">
+          <div class="privacy-card">
+            <div class="privacy-head"><span class="privacy-icon">⌁</span><strong>Privacy by progression</strong></div>
+            <p>Keep exact addresses, direct contact details and sensitive documents behind explicit permissions.</p>
+            <div class="privacy-steps">
+              <span class="is-done">Discover</span><i></i><span class="is-done">Request</span><i></i><span>Connect</span><i></i><span>Work</span>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-icon">!</div>
+            <div><strong>Report or block</strong><small>Visible from profiles, chats and job relationships.</small></div>
+          </div>
+        </div>
+
+        <div class="trust-copy reveal">
+          <div class="eyebrow">Trust & safety</div>
+          <h2>Local hiring needs trust at every step.</h2>
+          <p>Verification, clear status changes and dispute pathways give both sides control without making the product feel bureaucratic.</p>
+          <div class="feature-list">
+            <div><span class="feature-num">01</span><div><strong>Identity & phone verification</strong><p>Verified badges can distinguish confirmed accounts from unverified profiles.</p></div></div>
+            <div><span class="feature-num">02</span><div><strong>Two-way accountability</strong><p>Both workers and hirers can review completed work and report abusive behaviour.</p></div></div>
+            <div><span class="feature-num">03</span><div><strong>Admin controls</strong><p>Moderate users, jobs, categories, verification, reviews, complaints, bans and platform settings.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-accent">
+      <div class="container jobs-section">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <div class="eyebrow">One job model</div>
+            <h2>Works for a visit, a contract or a long-term role.</h2>
+          </div>
+          <p>Use one consistent relationship model while changing only the details that matter for the work type.</p>
+        </div>
+        <div class="job-types">
+          <button class="job-type is-active" type="button" data-jobtype="one-time">
+            <span class="job-type-icon">⚡</span><strong>One-time work</strong><small>Repair, cleaning, moving, installation</small>
+          </button>
+          <button class="job-type" type="button" data-jobtype="temporary">
+            <span class="job-type-icon">◷</span><strong>Temporary / contract</strong><small>Days, weeks or a defined project</small>
+          </button>
+          <button class="job-type" type="button" data-jobtype="regular">
+            <span class="job-type-icon">↻</span><strong>Regular / permanent</strong><small>Repeat work or ongoing employment</small>
+          </button>
+        </div>
+        <div class="job-flow-card" id="job-flow-card">
+          <div class="job-flow-copy"><span class="eyebrow">Lifecycle</span><h3>Posted → response → hire → work → settlement → review</h3><p id="job-flow-copy">Best for a clearly defined task with a start and finish.</p></div>
+          <div class="lifecycle" aria-label="Job lifecycle">
+            <span>Posted</span><i></i><span>Matched</span><i></i><span>Confirmed</span><i></i><span>In progress</span><i></i><span>Completed</span><i></i><span>Closed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Questions</div>
+          <h2>Designed to feel simple even when the system underneath is serious.</h2>
+          <p>Progressive disclosure keeps complicated workflows out of the user's way until they are relevant.</p>
+        </div>
+        <div class="faq-list reveal">
+          <details open>
+            <summary>Can someone hire for a single small task?</summary>
+            <p>Yes. The job model supports one-time work as well as temporary contracts and regular or permanent employment.</p>
+          </details>
+          <details>
+            <summary>Can workers control who contacts them?</summary>
+            <p>Yes. Contact preferences, request permissions, block/report controls and job-gated communication are part of the experience.</p>
+          </details>
+          <details>
+            <summary>Will online payment be required?</summary>
+            <p>No. The initial product can support cash settlement while keeping payment records and later online-payment integration in the architecture.</p>
+          </details>
+          <details>
+            <summary>What can an administrator control?</summary>
+            <p>Users, categories, skills, worker profiles, jobs, applications, hiring relationships, reviews, verification, complaints, bans, settings and basic analytics.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section-sm">
+      <div class="container cta-inner">
+        <div><div class="eyebrow">The product in one sentence</div><h2>Local people. Real work. Clearer hiring.</h2></div>
+        <div class="cta-actions"><button class="btn btn-primary js-auth" data-role="worker">Create a worker profile</button><button class="btn btn-secondary js-auth" data-role="hirer">Post your first job</button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand brand-footer" href="#top"><span class="brand-mark">LH</span><span>LocalHire</span></a><p>Concept landing page for a local hiring and services marketplace.</p></div>
+      <div class="footer-links"><a href="#categories">Categories</a><a href="#how-it-works">How it works</a><a href="#trust">Trust & safety</a><a href="#faq">FAQ</a></div>
+      <div class="footer-meta"><span>© <span id="year"></span> LocalHire</span><button class="text-btn" data-toast="Privacy page can be connected here">Privacy</button><button class="text-btn" data-toast="Terms page can be connected here">Terms</button></div>
+    </div>
+  </footer>
+
+  <div class="modal-shell" id="modal-shell" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close icon-btn" type="button" aria-label="Close dialog" data-modal-close>×</button>
+      <div class="modal-kicker" id="modal-kicker">Get started</div>
+      <h2 id="modal-title">Choose how you want to use LocalHire.</h2>
+      <p id="modal-copy">This prototype focuses on the product entry point. The next screen would open a role-specific onboarding flow.</p>
+      <div class="modal-options">
+        <button class="modal-option" type="button" data-toast="Hirer onboarding selected"><span>⌖</span><div><strong>I want to hire</strong><small>Search people, post jobs and manage hiring.</small></div><b>→</b></button>
+        <button class="modal-option" type="button" data-toast="Worker onboarding selected"><span>↗</span><div><strong>I want to find work</strong><small>Build a profile and get discovered locally.</small></div><b>→</b></button>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
